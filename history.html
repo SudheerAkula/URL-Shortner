@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> history page </title>
+<style>
+table, th, td {
+  border: 1px solid black;
+  width:100%; 
+ 
+}
+
+th {
+  color: red;
+ 
+} 
+table.center {
+  margin-left : auto;
+  margin-right : auto;
+  margin-right: 50px;
+}
+table {
+  border-collapse: collapse; 
+}
+</style
+        
+</tr>
+</head>
+<body>
+
+  <h1>Welcome to history page</h1>
+    
+  {% for short_url in data %}
+    
+  <table style="width:75%">
+    <tr>
+        
+      <th>Original_ Url</th>
+      <th>Short_Url</th>
+        
+    </tr>
+    <tr>
+      <td>{{ data[short_url] }}</td>
+      <td>{{ short_url }}</td>
+    </tr>
+    </table>
+    {% endfor %}  
+</body>
+</html>
